@@ -1,6 +1,5 @@
 {
   "buildCommand": "echo 'No build needed'",
-  "framework": "static",
   "public": true,
   "rewrites": [
     {
