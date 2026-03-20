@@ -30,7 +30,7 @@ export default async function handler(req, res) {
           'Authorization': `Bearer ${process.env.RESEND_API_KEY}`
         },
         body: JSON.stringify({
-          from: 'noreply@hireshubham.com',
+          from: 'Contact Form <onboarding@resend.dev>'
           to: process.env.OWNER_EMAIL || 'hello@hireshubham.com',
           subject: `New Discovery Call Request from ${name}`,
           html: `
