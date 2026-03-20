@@ -1,0 +1,21 @@
+{
+  "name": "hireshubham",
+  "version": "1.0.0",
+  "description": "B2B Outbound Sales Service Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build needed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "b2b",
+    "outbound",
+    "sales",
+    "saas"
+  ],
+  "author": "Shubham",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
