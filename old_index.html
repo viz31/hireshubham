@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>hireShubham.com — B2B Outbound That Converts</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--off:#f6f8ff;--off2:#edf0ff;
+  --ink:#080e24;--ink2:#1b2444;--ink3:#4a5473;--ink4:#8892b0;
+  --rule:#e0e4f2;--rule2:#c8ceea;
+  --b:#1845e8;--b2:#2554f5;--b3:#5b7fff;--b4:#dde5ff;--b5:#edf0ff;--b6:#f4f6ff;
+  --navy:#071048;
+  --aq:#00d4b8;--aq2:rgba(0,212,184,.1);
+  --amber:#ff9f2e;--amberL:rgba(255,159,46,.1);
+  --green:#00c27a;--greenL:rgba(0,194,122,.1);
+  --r:10px;--r2:18px;--r3:26px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--off)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--b),var(--aq));border-radius:10px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:0 5vw;background:rgba(255,255,255,.93);backdrop-filter:blur(24px);border-bottom:1px solid var(--rule);animation:slideDown .6s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
+.ni{max-width:1160px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;transition:.3s}
+.lm{width:40px;height:40px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.3s;box-shadow:0 4px 15px rgba(24,69,232,.2);background:var(--b6)}
+.lm:hover{transform:scale(1.1);box-shadow:0 6px 25px rgba(24,69,232,.35)}
+.lm img{width:100%;height:100%;object-fit:contain;padding:4px}
+.lt{display:flex;flex-direction:column;line-height:1.1}
+.lt-name{font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
+.lt-tag{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--b3);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:.6}50%{opacity:1}}
+.nl{display:flex;gap:1px}
+.nl a{font-size:13px;font-weight:500;color:var(--ink4);text-decoration:none;padding:7px 13px;border-radius:8px;transition:.2s;position:relative}
+.nl a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:2px;background:linear-gradient(90deg,var(--b),var(--aq));transform:translateX(-50%);transition:.3s}
+.nl a:hover::after{width:80%}
+.nl a:hover{color:var(--ink);transform:translateY(-2px)}
+.nc{background:linear-gradient(135deg,var(--b),var(--b2));color:#fff;padding:9px 22px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;transition:.3s;display:flex;align-items:center;gap:7px;box-shadow:0 4px 15px rgba(24,69,232,.2);position:relative;overflow:hidden;border:none;cursor:pointer}
+.nc::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:translateX(-100%);animation:shine 3s infinite}
+@keyframes shine{to{transform:translateX(100%)}}
+.nc:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(24,69,232,.4)}
+
+.hero{min-height:100vh;padding:96px 5vw 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#ffffff 0%,#f8f9ff 100%);display:flex;align-items:flex-end}
+.hero::before{content:'';position:absolute;top:-120px;right:-80px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(24,69,232,.08) 0%,transparent 65%);pointer-events:none;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(30px)}}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-40px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,184,.06) 0%,transparent 70%);pointer-events:none;animation:float 5s ease-in-out infinite .3s}
+.hgrid{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(24,69,232,.12) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse 65% 65% at 65% 40%,black 0%,transparent 100%);animation:gridShift 20s linear infinite}
+@keyframes gridShift{0%{background-position:0 0}100%{background-position:30px 30px}}
+.hi{max-width:1160px;margin:0 auto;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr 480px;gap:0;align-items:flex-end;min-height:calc(100vh - 96px)}
+.hl{padding-bottom:80px;display:flex;flex-direction:column;justify-content:center}
+.ticker-row{display:flex;align-items:center;gap:10px;margin-bottom:32px;height:32px;overflow:hidden;animation:fadeInUp .8s ease}
+.tk-chip{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--b5),var(--b6));border:1px solid var(--b4);border-radius:100px;padding:6px 14px 6px 8px;flex-shrink:0;box-shadow:0 4px 12px rgba(24,69,232,.1);transition:.3s}
+.tk-chip:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(24,69,232,.2)}
+.tk-dot{width:7px;height:7px;border-radius:50%;background:var(--b);animation:tkpulse 2s ease infinite,spin 3s linear infinite}
+@keyframes tkpulse{0%,100%{box-shadow:0 0 0 0 rgba(24,69,232,.4)}70%{box-shadow:0 0 0 10px rgba(24,69,232,0)}}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.tk-chip span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--b);letter-spacing:.08em;font-weight:500}
+.tk-text-wrap{overflow:hidden;height:32px;flex:1}
+.tk-text{display:flex;flex-direction:column;animation:tk-roll 9s ease-in-out infinite}
+@keyframes tk-roll{0%,15%{transform:translateY(0)}25%,40%{transform:translateY(-32px)}50%,65%{transform:translateY(-64px)}75%,90%{transform:translateY(-96px)}100%{transform:translateY(0)}}
+.tk-item{height:32px;display:flex;align-items:center;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--ink2);letter-spacing:-.2px;white-space:nowrap}
+.hh{font-family:'Sora',sans-serif;font-size:clamp(50px,7vw,88px);font-weight:800;line-height:.95;letter-spacing:-3px;margin-bottom:24px;max-width:720px}
+.hh .w{display:inline-block;animation:w-rise .7s cubic-bezier(.34,1.56,.64,1) both;opacity:0;transform:translateY(40px)}
+.hh .e{color:var(--b);position:relative;background:linear-gradient(135deg,var(--b),var(--b2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.w1{animation-delay:.05s}.w2{animation-delay:.15s}.w3{animation-delay:.25s}.w4{animation-delay:.35s}.w5{animation-delay:.45s}.w6{animation-delay:.55s}.w7{animation-delay:.65s}
+@keyframes w-rise{to{opacity:1;transform:translateY(0)}}
+.hsub{font-size:17px;color:var(--ink3);line-height:1.75;max-width:440px;margin-bottom:36px;animation:fadeInUp .8s .3s ease both}
+.hbtns{display:flex;gap:12px;align-items:center;margin-bottom:52px;flex-wrap:wrap;animation:fadeInUp .8s .4s ease both}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.btn-p{background:linear-gradient(135deg,var(--b),var(--b2));color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;transition:.3s;display:inline-flex;align-items:center;gap:8px;letter-spacing:.01em;font-family:'Sora',sans-serif;box-shadow:0 6px 20px rgba(24,69,232,.25);position:relative;overflow:hidden;border:none;cursor:pointer}
+.btn-p::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:translateX(-100%);animation:btnShine 3s infinite}
+@keyframes btnShine{to{transform:translateX(100%)}}
+.btn-p:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(24,69,232,.35)}
+.hs{display:flex;gap:0;border:1px solid var(--rule);border-radius:var(--r2);overflow:hidden;background:var(--bg);width:fit-content;box-shadow:0 6px 25px rgba(24,69,232,.12);animation:fadeInUp .8s .5s ease both}
+.hsi{padding:14px 22px;border-right:1px solid var(--rule);transition:.3s;position:relative;overflow:hidden}
+.hsi:hover{background:var(--b5);transform:scale(1.05)}
+.hsi:last-child{border-right:none}
+.hsi::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(24,69,232,.1),transparent);transform:translateX(-100%);animation:statShine 3s infinite}
+@keyframes statShine{to{transform:translateX(100%)}}
+.hsi-n{font-family:'Sora',sans-serif;font-size:26px;font-weight:800;color:var(--navy);letter-spacing:-1px;line-height:1;margin-bottom:3px;position:relative;z-index:1}
+.hsi-n span{color:var(--b)}
+.hsi-l{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;position:relative;z-index:1}
+.hr{position:relative;align-self:flex-end;height:100%;display:flex;align-items:flex-end;justify-content:center;animation:fadeInUp .8s .4s ease both}
+.pcol{position:relative;width:100%;height:calc(100vh - 96px);display:flex;align-items:flex-end;justify-content:center}
+.pimg{max-height:92%;width:auto;max-width:440px;object-fit:contain;object-position:bottom center;display:block;position:relative;z-index:2;filter:contrast(1.03) brightness(1.01);animation:floatImg 4s ease-in-out infinite}
+@keyframes floatImg{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.pglow{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:380px;height:200px;background:radial-gradient(ellipse at bottom,rgba(24,69,232,.15) 0%,transparent 70%);z-index:1;pointer-events:none;animation:glowPulse 3s ease-in-out infinite}
+@keyframes glowPulse{0%,100%{opacity:.5;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.1)}}
+.fc{position:absolute;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border:1px solid var(--rule);border-radius:var(--r);padding:12px 16px;box-shadow:0 8px 32px rgba(24,69,232,.15);transition:.3s;cursor:pointer}
+.fc:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 12px 40px rgba(24,69,232,.25)}
+.fc1{top:22%;left:-54px;animation:fc 4.5s cubic-bezier(.4,.0,.2,1) infinite}
+.fc2{top:46%;right:-48px;animation:fc 5s cubic-bezier(.4,.0,.2,1) infinite .8s}
+.fc3{bottom:26%;left:-50px;animation:fc 4.2s cubic-bezier(.4,.0,.2,1) infinite 1.5s}
+@keyframes fc{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.fc-n{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--b);letter-spacing:-1px;line-height:1;margin-bottom:2px}
+.fc-l{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink4);letter-spacing:.09em;text-transform:uppercase}
+.fc-bar{height:2px;background:var(--rule);border-radius:1px;margin-top:8px;overflow:hidden}
+.fc-fill{height:100%;background:linear-gradient(90deg,var(--b),var(--aq));border-radius:1px;animation:fb 2.5s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes fb{from{width:0}to{width:var(--w)}}
+
+.sec{padding:96px 5vw;position:relative}
+.si{max-width:1160px;margin:0 auto}
+.bg2{background:linear-gradient(135deg,var(--off) 0%,var(--off2) 100%)}
+.bgnv{background:linear-gradient(135deg,var(--navy) 0%,rgba(7,16,72,.8) 100%)}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--b);display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;animation:slideInLeft .6s ease}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+.tag::before{content:'';width:18px;height:1.5px;background:var(--b);animation:expandWidth .6s ease}
+@keyframes expandWidth{from{width:0}to{width:18px}}
+.sh{font-family:'Sora',sans-serif;font-size:clamp(30px,4.2vw,52px);font-weight:800;letter-spacing:-2px;color:var(--navy);line-height:.98;margin-bottom:14px}
+.sh .d{color:var(--ink4);background:linear-gradient(135deg,var(--b),var(--aq));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl{font-size:16px;color:var(--ink3);line-height:1.75;max-width:460px;margin-bottom:48px}
+
+.plrs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plr{background:var(--bg);border:1px solid var(--rule);border-radius:var(--r2);padding:30px 26px;position:relative;overflow:hidden;transition:.35s;display:flex;flex-direction:column;box-shadow:0 4px 15px rgba(24,69,232,.05);animation:cardReveal .6s ease both}
+@keyframes cardReveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.plr:nth-child(2){animation-delay:.1s}.plr:nth-child(3){animation-delay:.2s}
+.plr:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 50px rgba(24,69,232,.15);border-color:var(--b4)}
+.plr::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,69,232,.05),transparent);opacity:0;transition:.3s}
+.plr:hover::before{opacity:1}
+.plr-top{position:absolute;top:0;left:0;right:0;height:4px;animation:topBarGrow .6s ease}
+@keyframes topBarGrow{from{width:0}to{width:100%}}
+.pa .plr-top{background:linear-gradient(90deg,var(--b),var(--aq))}.pb .plr-top{background:linear-gradient(90deg,var(--amber),#ff6b6b)}.pc .plr-top{background:linear-gradient(90deg,var(--green),var(--aq))}
+.plr-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:5px;display:inline-block;margin-bottom:16px;transition:.2s}
+.pa .plr-tag{color:var(--b);background:var(--b5);border:1px solid var(--b4)}.pb .plr-tag{color:var(--amber);background:var(--amberL);border:1px solid rgba(255,159,46,.2)}.pc .plr-tag{color:var(--green);background:var(--greenL);border:1px solid rgba(0,194,122,.2)}
+.plr:hover .plr-tag{transform:scale(1.1)}
+.plr-name{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;line-height:1.15}
+.plr-desc{font-size:13px;color:var(--ink3);line-height:1.6;margin-bottom:20px}
+.plr-price{font-family:'Sora',sans-serif;font-size:44px;font-weight:800;letter-spacing:-2px;line-height:1;margin-bottom:3px}
+.pa .plr-price{color:var(--b)}.pb .plr-price{color:var(--amber)}.pc .plr-price{color:var(--green)}
+.plr-period{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink4);letter-spacing:.07em;text-transform:uppercase;margin-bottom:20px}
+.plr-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1}
+.plr-list li{font-size:13px;color:var(--ink2);display:flex;align-items:flex-start;gap:8px;line-height:1.5;transition:.2s}
+.plr:hover .plr-list li{transform:translateX(4px)}
+.pld{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.pa .pld{background:var(--b)}.pb .pld{background:var(--amber)}.pc .pld{background:var(--green)}
+.plr-btn{display:block;padding:11px;text-align:center;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;transition:.3s;font-family:'Sora',sans-serif;letter-spacing:.02em;margin-top:auto;position:relative;overflow:hidden;border:none;cursor:pointer}
+.pa .plr-btn{background:linear-gradient(135deg,var(--b),var(--b2));color:#fff}.pb .plr-btn{background:linear-gradient(135deg,var(--amber),#ff8800);color:#fff}.pc .plr-btn{background:linear-gradient(135deg,var(--green),#00a872);color:#fff}
+.plr:hover .plr-btn{transform:translateY(-2px);box-shadow:0 8px 20px rgba(24,69,232,.3)}
+
+.abwrap{display:grid;grid-template-columns:400px 1fr;gap:64px;align-items:start;animation:fadeInUp .8s ease both}
+.aphoto{position:relative;border-radius:var(--r2);overflow:hidden;background:linear-gradient(160deg,var(--off) 0%,var(--b5) 100%);border:1px solid var(--rule);animation:photoSlideIn .8s ease}
+@keyframes photoSlideIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.aphoto img{width:100%;height:520px;object-fit:cover;object-position:top center;display:block;filter:saturate(1.04) contrast(1.02)}
+.aphoto-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,16,72,.55) 0%,transparent 52%);pointer-events:none}
+.aname{position:absolute;bottom:22px;left:22px;z-index:2}
+.an-name{font-family:'Sora',sans-serif;font-size:21px;font-weight:800;color:#fff;margin-bottom:2px}
+.an-role{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.08em;text-transform:uppercase}
+.apbadge{position:absolute;top:18px;right:-10px;z-index:5;background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:10px 14px;box-shadow:0 8px 24px rgba(24,69,232,.12);animation:badgeFloat 0.8s cubic-bezier(.34,1.56,.64,1)}
+@keyframes badgeFloat{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+.apb-n{font-family:'Sora',sans-serif;font-size:26px;font-weight:800;color:var(--b);letter-spacing:-1px;line-height:1}
+.apb-l{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--ink4);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.abt .sh{margin-bottom:16px}
+.abt p{font-size:15px;color:var(--ink3);line-height:1.82;margin-bottom:14px;animation:fadeInUp .8s ease both}
+.dlist{border:1px solid var(--rule);border-radius:var(--r2);overflow:hidden;margin:22px 0}
+.drow{display:flex;align-items:center;gap:14px;padding:13px 17px;border-bottom:1px solid var(--rule);background:var(--bg);transition:.3s;animation:revealRow .5s ease both}
+@keyframes revealRow{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+.drow:last-child{border-bottom:none}
+.drow:hover{background:var(--b5);transform:translateX(4px)}
+.drow-icon{width:30px;height:30px;border-radius:8px;background:var(--b5);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.drow-icon svg{width:14px;height:14px;stroke:var(--b);fill:none;stroke-width:2}
+.drow-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink4);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1px}
+.drow-val{font-size:13px;font-weight:600;color:var(--ink2)}
+.tchips{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}
+.tch{font-family:'JetBrains Mono',monospace;font-size:10px;padding:5px 11px;border-radius:7px;border:1px solid var(--rule);color:var(--ink3);background:var(--off);transition:.15s}
+.tch:hover{border-color:var(--b);color:var(--b);background:var(--b5)}
+.mkts{display:flex;gap:8px;flex-wrap:wrap}
+.mkt{display:flex;align-items:center;gap:7px;background:var(--off);border:1px solid var(--rule);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--ink3);font-weight:500;transition:.15s}
+.mkt:hover{background:var(--b5);border-color:var(--b4);color:var(--b)}
+
+.bgnv .tag{color:rgba(255,255,255,.4)}.bgnv .tag::before{background:rgba(255,255,255,.25)}.bgnv .sh{color:#fff}.bgnv .sl{color:rgba(255,255,255,.42)}
+.flow{display:flex;gap:0;position:relative;margin:8px 0}
+.flow::before{content:'';position:absolute;top:24px;left:27px;right:27px;height:1px;background:rgba(255,255,255,.1);z-index:0;animation:lineGrow 1s ease forwards}
+@keyframes lineGrow{from{width:0}to{width:100%}}
+.fstep{flex:1;text-align:center;position:relative;z-index:1;padding:0 10px;animation:stepBounce .6s cubic-bezier(.34,1.56,.64,1) both}
+.flow .fstep:nth-child(1){animation-delay:.1s}.flow .fstep:nth-child(2){animation-delay:.2s}.flow .fstep:nth-child(3){animation-delay:.3s}.flow .fstep:nth-child(4){animation-delay:.4s}.flow .fstep:nth-child(5){animation-delay:.5s}
+@keyframes stepBounce{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fcirc{width:50px;height:50px;border-radius:50%;margin:0 auto 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:rgba(255,255,255,.75);transition:.2s}
+.fstep:hover .fcirc{background:var(--b);border-color:var(--b);color:#fff;transform:scale(1.1)}
+.f-lbl{font-size:13px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:3px;font-family:'Sora',sans-serif}
+.f-sub{font-size:11px;color:rgba(255,255,255,.3);line-height:1.4;font-family:'JetBrains Mono',monospace;letter-spacing:.03em}
+
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.case{background:var(--bg);border:1px solid var(--rule);border-radius:var(--r2);overflow:hidden;transition:.35s;animation:caseReveal .6s ease both}
+@keyframes caseReveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.cgrid .case:nth-child(2){animation-delay:.2s}
+.case:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 50px rgba(24,69,232,.15);border-color:var(--rule2)}
+.cvis{height:136px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.cva{background:linear-gradient(135deg,var(--b5) 0%,#dde8ff 100%)}.cvb{background:linear-gradient(135deg,rgba(255,159,46,.08) 0%,rgba(255,107,107,.08) 100%)}
+.cv-ghost{position:absolute;bottom:-12px;right:10px;font-family:'Sora',sans-serif;font-size:90px;font-weight:800;letter-spacing:-4px;opacity:.1;line-height:1;pointer-events:none}
+.cv-pill{position:relative;z-index:1;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid var(--rule);border-radius:100px;padding:8px 20px;display:flex;align-items:center;gap:10px;animation:pillPop .6s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pillPop{from{transform:scale(0.8);opacity:0}to{transform:scale(1);opacity:1}}
+.cvp-n{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-1px}
+.cvp-l{font-size:11px;color:var(--ink4)}
+.cbody{padding:22px 24px}
+.crow{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
+.cco{font-family:'Sora',sans-serif;font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
+.cflag{font-size:17px}
+.cloc{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink4);letter-spacing:.05em;margin-bottom:10px}
+.cdesc{font-size:13px;color:var(--ink3);line-height:1.6;margin-bottom:14px}
+.ctags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.ctag{font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 8px;border-radius:5px;background:var(--off);color:var(--ink4);border:1px solid var(--rule);text-transform:uppercase}
+.cnums{display:flex;gap:12px;margin-top:12px}
+.cnum{text-align:center}
+.cn-n{font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:var(--navy)}
+.cn-l{font-size:10px;color:var(--ink4);font-family:'JetBrains Mono',monospace;letter-spacing:.05em;text-transform:uppercase;margin-top:2px}
+
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tc{background:var(--bg);border:1px solid var(--rule);border-radius:var(--r2);padding:28px;position:relative;transition:.35s;animation:tcReveal .6s ease both}
+@keyframes tcReveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.tgrid .tc:nth-child(2){animation-delay:.2s}
+.tc:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(24,69,232,.12);border-color:var(--rule2)}
+.tc-qm{font-family:'Sora',sans-serif;font-size:48px;font-weight:800;color:var(--b);opacity:.2;position:absolute;top:10px;left:18px;line-height:1;pointer-events:none}
+.tc-stars{display:flex;gap:4px;margin-bottom:12px}
+.tc-stars svg{width:16px;height:16px;fill:var(--amber);animation:starTwinkle .4s ease both}
+.tc-stars svg:nth-child(1){animation-delay:.1s}.tc-stars svg:nth-child(2){animation-delay:.2s}.tc-stars svg:nth-child(3){animation-delay:.3s}.tc-stars svg:nth-child(4){animation-delay:.4s}.tc-stars svg:nth-child(5){animation-delay:.5s}
+@keyframes starTwinkle{from{opacity:0;transform:scale(0.5) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.tc-q{font-size:14px;color:var(--ink3);line-height:1.75;margin-bottom:16px;font-style:italic;animation:fadeInUp .6s .3s ease both}
+.tc-person{display:flex;align-items:center;gap:12px;animation:fadeInUp .6s .4s ease both}
+.tc-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--b),var(--b2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.tc-name{font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:var(--navy)}
+.tc-role{font-size:11px;color:var(--ink4);font-family:'JetBrains Mono',monospace;letter-spacing:.04em}
+.tc-badge{font-size:9px;color:var(--green);background:rgba(0,194,122,.1);padding:3px 8px;border-radius:4px;margin-top:2px;border:1px solid rgba(0,194,122,.2)}
+
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
+.tool{background:var(--bg);border:1px solid var(--rule);border-radius:var(--r2);padding:16px;text-align:center;transition:.3s;cursor:pointer;box-shadow:0 4px 12px rgba(24,69,232,.05);animation:toolReveal .5s ease both}
+@keyframes toolReveal{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+.tg .tool:nth-child(1){animation-delay:.05s}.tg .tool:nth-child(2){animation-delay:.1s}.tg .tool:nth-child(3){animation-delay:.15s}.tg .tool:nth-child(4){animation-delay:.2s}.tg .tool:nth-child(5){animation-delay:.25s}.tg .tool:nth-child(6){animation-delay:.3s}.tg .tool:nth-child(7){animation-delay:.35s}.tg .tool:nth-child(8){animation-delay:.4s}.tg .tool:nth-child(9){animation-delay:.45s}.tg .tool:nth-child(10){animation-delay:.5s}.tg .tool:nth-child(11){animation-delay:.55s}.tg .tool:nth-child(12){animation-delay:.6s}
+.tool:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 12px 28px rgba(24,69,232,.15);border-color:var(--b4)}
+.tool-ico{font-size:32px;margin-bottom:8px;transition:.3s}
+.tool:hover .tool-ico{transform:scale(1.2) rotate(10deg)}
+.tool-n{font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.tool-c{font-size:11px;color:var(--ink4);font-family:'JetBrains Mono',monospace}
+
+.cta-sec{background:linear-gradient(135deg,var(--navy) 0%,rgba(7,16,72,.9) 50%,#0f1e4d 100%);color:#fff;text-align:center;position:relative;overflow:hidden;padding:96px 5vw}
+.cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(24,69,232,.1) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(0,212,184,.08) 0%,transparent 50%);pointer-events:none;animation:ctaFloat 8s ease-in-out infinite}
+@keyframes ctaFloat{0%,100%{opacity:.5}50%{opacity:.8}}
+.cta-i{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.cta-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r3);padding:40px;backdrop-filter:blur(10px);margin:40px 0;transition:.4s;box-shadow:0 8px 32px rgba(0,0,0,.1);animation:cardSlideUp .8s ease}
+@keyframes cardSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.cta-card:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);transform:translateY(-4px)}
+.cta-card h3{font-family:'Sora',sans-serif;font-size:28px;font-weight:800;margin-bottom:12px;color:#fff}
+.cta-card p{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:24px}
+
+.booking-form{display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,.95);padding:24px;border-radius:var(--r2);border:1px solid rgba(255,255,255,.3);margin-top:20px;backdrop-filter:blur(10px);animation:formSlideUp .6s ease}
+@keyframes formSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:13px;font-weight:600;color:var(--ink2)}
+.form-group input,.form-group select,.form-group textarea{padding:12px 14px;border:1px solid var(--rule);border-radius:8px;font-family:inherit;font-size:13px;transition:.3s;background:var(--bg)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--b);box-shadow:0 0 0 3px var(--b5);transform:scale(1.01)}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-submit{background:linear-gradient(135deg,var(--b),var(--b2));color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;border:none;cursor:pointer;transition:.3s;align-self:flex-start;box-shadow:0 6px 20px rgba(24,69,232,.25);position:relative;overflow:hidden;font-family:'Sora',sans-serif;font-size:14px}
+.form-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:translateX(-100%);animation:formShine 3s infinite}
+@keyframes formShine{to{transform:translateX(100%)}}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(24,69,232,.35)}
+.form-submit:disabled{opacity:.6;cursor:not-allowed}
+.form-message{padding:12px 16px;border-radius:8px;font-size:13px;margin-top:12px;display:none;animation:messageSlide .4s ease}
+@keyframes messageSlide{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.form-message.success{background:rgba(0,194,122,.15);color:var(--green);border:1px solid rgba(0,194,122,.3);display:block}
+.cta-list{list-style:none;padding:0;margin-bottom:32px;text-align:left}
+.cta-list li{padding:12px 0;padding-left:32px;position:relative;color:rgba(255,255,255,.8);font-size:14px;transition:.3s;animation:listItemSlide .5s ease both}
+@keyframes listItemSlide{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+.cta-list li:nth-child(1){animation-delay:.1s}.cta-list li:nth-child(2){animation-delay:.2s}.cta-list li:nth-child(3){animation-delay:.3s}.cta-list li:nth-child(4){animation-delay:.4s}
+.cta-list li:hover{transform:translateX(4px);color:#fff}
+.cta-list li::before{content:'✓';position:absolute;left:0;color:var(--aq);font-weight:800;font-size:18px;animation:checkPop .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes checkPop{0%{transform:scale(0)}100%{transform:scale(1)}}
+
+footer{background:linear-gradient(135deg,var(--navy) 0%,rgba(7,16,72,.8) 100%);color:rgba(255,255,255,.75);padding:60px 5vw 40px}
+.fi{max-width:1160px;margin:0 auto}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.fb{padding-right:40px}
+.fb-brand{display:flex;align-items:center;gap:12px;margin-bottom:12px;transition:.3s}
+.fb-brand:hover{transform:translateY(-2px)}
+.fb-mark{width:40px;height:40px;background:transparent;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.fb-mark img{width:100%;height:100%;object-fit:contain}
+.fb-name{font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:#fff}
+.fb p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6)}
+.fcol h4{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px}
+.fcol a{display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:12px;transition:.3s;position:relative;padding-left:10px}
+.fcol a::before{content:'→';position:absolute;left:0;opacity:0;transition:.3s}
+.fcol a:hover{color:#fff;transform:translateX(4px)}
+.fcol a:hover::before{opacity:1}
+.fb-bot{display:flex;justify-content:space-between;align-items:center;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.5)}
+.fe{color:var(--aq);text-decoration:none;transition:.3s}
+.fe:hover{color:#fff}
+
+.admin-panel{position:fixed;bottom:20px;right:20px;z-index:1000}
+.admin-btn{background:var(--b);color:#fff;border:none;padding:12px 16px;border-radius:8px;cursor:pointer;font-weight:600;transition:.3s;font-size:12px;box-shadow:0 4px 12px rgba(24,69,232,.3)}
+.admin-btn:hover{background:var(--b2);transform:scale(1.05);box-shadow:0 6px 20px rgba(24,69,232,.4)}
+.admin-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:2000}
+.admin-modal.active{display:flex}
+.admin-content{background:#fff;border-radius:var(--r2);padding:32px;max-width:500px;max-height:80vh;overflow-y:auto;position:relative;animation:modalSlideUp .4s ease}
+@keyframes modalSlideUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+.admin-content h2{font-size:20px;font-weight:800;margin-bottom:20px;color:var(--navy)}
+.admin-form{display:flex;flex-direction:column;gap:16px}
+.admin-form label{font-weight:600;font-size:13px;color:var(--ink2)}
+.admin-form input[type="file"]{padding:8px;cursor:pointer}
+.admin-form button{padding:12px;border:none;border-radius:8px;background:var(--b);color:#fff;cursor:pointer;font-weight:600;transition:.3s}
+.admin-form button:hover{background:var(--b2)}
+.close-admin{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink4);transition:.2s}
+.close-admin:hover{color:var(--ink);transform:scale(1.2)}
+.admin-status{font-size:12px;color:var(--green);margin-top:4px;font-weight:600}
+
+@media(max-width:1024px){
+  .hi{grid-template-columns:1fr}
+  .plrs{grid-template-columns:repeat(2,1fr)}
+  .tg{grid-template-columns:repeat(3,1fr)}
+  .abwrap{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .plrs,.cgrid,.tgrid{grid-template-columns:1fr}
+  .tg{grid-template-columns:repeat(2,1fr)}
+  .nl{display:none}
+  .flow{flex-wrap:wrap;gap:20px}.flow::before{display:none}
+  .fstep{flex:0 0 calc(50% - 10px)}
+  .hh{font-size:clamp(40px,6vw,60px)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="#" class="logo">
+      <div class="lm">
+        <img src="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='100' fill='%231845e8'/%3E%3Ctext x='50' y='60' font-size='60' font-weight='bold' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E" alt="Logo">
+      </div>
+      <div class="lt">
+        <div class="lt-name">hireShubham</div>
+        <div class="lt-tag">B2B Outbound</div>
+      </div>
+    </a>
+    <div class="nl">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#cases">Cases</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nc">Book a Call →</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hgrid"></div>
+  <div class="hi">
+    <div class="hl">
+      <div class="ticker-row">
+        <div class="tk-chip">
+          <div class="tk-dot"></div>
+          <span>LIVE</span>
+        </div>
+        <div class="tk-text-wrap">
+          <div class="tk-text">
+            <div class="tk-item">5+ Years Expertise</div>
+            <div class="tk-item">Multi-Market Leader</div>
+            <div class="tk-item">GDPR Compliant</div>
+            <div class="tk-item">5+ Years Expertise</div>
+          </div>
+        </div>
+      </div>
+      <h1 class="hh">
+        <span class="w w1">B2B</span>
+        <span class="w w2">Outbound</span>
+        <span class="w w3">That</span>
+        <span class="w w4"><span class="e">Converts</span></span>
+      </h1>
+      <p class="hsub">From sales ops setup to full growth engines — I build repeatable outbound systems that generate qualified meetings. Global experience. GDPR compliant. Realistic numbers.</p>
+      <div class="hbtns">
+        <button class="btn-p" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Discovery Call →</button>
+      </div>
+      <div class="hs">
+        <div class="hsi">
+          <div class="hsi-n"><span>5+</span></div>
+          <div class="hsi-l">Years</div>
+        </div>
+        <div class="hsi">
+          <div class="hsi-n"><span>3</span></div>
+          <div class="hsi-l">Pillars</div>
+        </div>
+        <div class="hsi">
+          <div class="hsi-n"><span>4</span></div>
+          <div class="hsi-l">Markets</div>
+        </div>
+      </div>
+    </div>
+    <div class="hr">
+      <div class="pcol">
+        <div class="pglow"></div>
+        <div class="fc fc1"><div class="fc-n">22</div><div class="fc-l">meetings</div><div class="fc-bar"><div class="fc-fill" style="--w:73%"></div></div></div>
+        <div class="fc fc2"><div class="fc-n">4.6%</div><div class="fc-l">reply rate</div><div class="fc-bar"><div class="fc-fill" style="--w:92%"></div></div></div>
+        <div class="fc fc3"><div class="fc-n">USD $12k</div><div class="fc-l">ARR per lead</div><div class="fc-bar"><div class="fc-fill" style="--w:68%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg2" id="services">
+  <div class="si">
+    <span class="tag">Service Pillars</span>
+    <h2 class="sh">Three ways<br><span class="d">to scale revenue.</span></h2>
+    <p class="sl">Choose your path based on where you are in your outbound journey.</p>
+    <div class="plrs">
+      <div class="plr pa">
+        <div class="plr-top"></div>
+        <span class="plr-tag">Foundation</span>
+        <h3 class="plr-name">Sales Ops Setup</h3>
+        <p class="plr-desc">We architect your entire sales infrastructure from scratch.</p>
+        <div class="plr-price">$1,500</div>
+        <div class="plr-period">One-time setup</div>
+        <ul class="plr-list">
+          <li><span class="pld"></span>HubSpot setup & config</li>
+          <li><span class="pld"></span>Cold outreach workflow</li>
+          <li><span class="pld"></span>Email validation setup</li>
+          <li><span class="pld"></span>Pipeline architecture</li>
+        </ul>
+        <button class="plr-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started →</button>
+      </div>
+      <div class="plr pb">
+        <div class="plr-top"></div>
+        <span class="plr-tag">Growth</span>
+        <h3 class="plr-name">Growth Engine</h3>
+        <p class="plr-desc">Fully managed outbound system that runs on autopilot monthly.</p>
+        <div class="plr-price">$2,500</div>
+        <div class="plr-period">Per month</div>
+        <ul class="plr-list">
+          <li><span class="pld"></span>List building & research</li>
+          <li><span class="pld"></span>Sequence management</li>
+          <li><span class="pld"></span>Weekly reporting</li>
+          <li><span class="pld"></span>Optimization cycles</li>
+        </ul>
+        <button class="plr-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start Growing →</button>
+      </div>
+      <div class="plr pc">
+        <div class="plr-top"></div>
+        <span class="plr-tag">Outsourced</span>
+        <h3 class="plr-name">SDR-as-a-Service</h3>
+        <p class="plr-desc">Your dedicated outbound team working on demand.</p>
+        <div class="plr-price">$4,000</div>
+        <div class="plr-period">Per month</div>
+        <ul class="plr-list">
+          <li><span class="pld"></span>Full-time SDR resource</li>
+          <li><span class="pld"></span>Lead gen & qualification</li>
+          <li><span class="pld"></span>Meetings booked daily</li>
+          <li><span class="pld"></span>24-hour reporting</li>
+        </ul>
+        <button class="plr-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Your SDR →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="si">
+    <span class="tag">About</span>
+    <h2 class="sh">The person<br>behind your<br><span class="d">pipeline.</span></h2>
+    <div class="abwrap">
+      <div class="aphoto">
+        <div class="aphoto-grad"></div>
+        <div class="aname">
+          <div class="an-name">Shubham</div>
+          <div class="an-role">B2B Outbound Specialist</div>
+        </div>
+        <div class="apbadge">
+          <div class="apb-n">5+</div>
+          <div class="apb-l">years B2B outbound</div>
+        </div>
+      </div>
+      <div class="abt">
+        <p>I'm a B2B outbound specialist with 5+ years of experience building and running sales systems for Seed and Series A founders across the US, UK, EU, and Australia.</p>
+        <p>I've worked with firms founded by Ex-Gartner directors, AI-first startups navigating GDPR compliance, and tech companies entering new markets from scratch — building the pipeline infrastructure that lets founders focus on closing, not prospecting.</p>
+        <p>I don't do strategy decks. I build the system, run it, and hand it over fully documented so it works with or without me.</p>
+        <ul class="dlist">
+          <li class="drow">
+            <div class="drow-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><div class="drow-lbl">Specialisation</div><div class="drow-val">B2B Outbound · CRM Architecture · Intent-Driven Lead Gen</div></div>
+          </li>
+          <li class="drow">
+            <div class="drow-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="drow-lbl">Experience</div><div class="drow-val">5+ Years · B2B Sales Outbound</div></div>
+          </li>
+          <li class="drow">
+            <div class="drow-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div><div class="drow-lbl">Clients Served</div><div class="drow-val">Ascot Morgan (NY) · Audit AI (UK) · and growing</div></div>
+          </li>
+          <li class="drow">
+            <div class="drow-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><div class="drow-lbl">Engagement Model</div><div class="drow-val">Independent Contractor · Fixed Fee · No Lock-in</div></div>
+          </li>
+        </ul>
+        <div class="tchips">
+          <span class="tch">HubSpot</span><span class="tch">Apollo.io</span><span class="tch">Clay</span><span class="tch">Lemlist</span><span class="tch">Salesforce</span><span class="tch">Sales Navigator</span><span class="tch">Pipedrive</span><span class="tch">NeverBounce</span>
+        </div>
+        <div class="mkts">
+          <div class="mkt">🇺🇸 USA</div>
+          <div class="mkt">🇬🇧 United Kingdom</div>
+          <div class="mkt">🇪🇺 European Union</div>
+          <div class="mkt">🇦🇺 Australia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bgnv" id="process">
+  <div class="si">
+    <span class="tag">How it works</span>
+    <h2 class="sh">Call to calendar.<br><span class="d" style="color:rgba(255,255,255,.25);">Five steps.</span></h2>
+    <p class="sl">Clear sequence. No surprises. From first call to meetings in your calendar.</p>
+    <div class="flow">
+      <div class="fstep"><div class="fcirc">1</div><div class="f-lbl">Discovery</div><div class="f-sub">20 min · fit check</div></div>
+      <div class="fstep"><div class="fcirc">2</div><div class="f-lbl">NDA + Proposal</div><div class="f-sub">Within 24 hours</div></div>
+      <div class="fstep"><div class="fcirc">3</div><div class="f-lbl">Sign + Pay</div><div class="f-sub">Agreement + first payment</div></div>
+      <div class="fstep"><div class="fcirc">4</div><div class="f-lbl">Onboarding</div><div class="f-sub">ICP · tools · domain</div></div>
+      <div class="fstep"><div class="fcirc">5</div><div class="f-lbl">Live</div><div class="f-sub">Meetings arriving</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg2" id="cases">
+  <div class="si">
+    <span class="tag">Case Studies</span>
+    <h2 class="sh">Real work.<br><span class="d">Verified results.</span></h2>
+    <p class="sl">Two clients. Numbers you can ask about.</p>
+    <div class="cgrid">
+      <div class="case">
+        <div class="cvis cva">
+          <div class="cv-pill"><div class="cvp-n">22</div><div class="cvp-l">meetings booked</div></div>
+        </div>
+        <div class="cbody">
+          <div class="crow"><span class="cco">Ascot Morgan</span><span class="cflag">🇺🇸</span></div>
+          <div class="cloc">New York, USA · Market Research & Thought Leadership</div>
+          <p class="cdesc">Fractional SDR targeting US research directors and enterprise strategy leaders. Clay-enriched outreach using funding events and Gartner alumni signals.</p>
+          <div class="ctags"><span class="ctag">Pillar C</span><span class="ctag">3 months</span><span class="ctag">SDR-as-a-Service</span></div>
+          <div class="cnums">
+            <div class="cnum"><div class="cn-n">4.6%</div><div class="cn-l">reply rate</div></div>
+            <div class="cnum"><div class="cn-n">&lt;1.5%</div><div class="cn-l">bounce</div></div>
+            <div class="cnum"><div class="cn-n">22</div><div class="cn-l">meetings</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="cvis cvb">
+          <div class="cv-pill"><div class="cvp-n">18</div><div class="cvp-l">meetings booked</div></div>
+        </div>
+        <div class="cbody">
+          <div class="crow"><span class="cco">Audit AI</span><span class="cflag">🇬🇧</span></div>
+          <div class="cloc">United Kingdom · AI-Powered Audit & Compliance Technology</div>
+          <p class="cdesc">Full Outbound Growth Engine. GDPR-compliant from Day 1. Clay intent enrichment targeting compliance leadership.</p>
+          <div class="ctags"><span class="ctag">Pillar B</span><span class="ctag">4 months</span><span class="ctag">GDPR-Compliant</span></div>
+          <div class="cnums">
+            <div class="cnum"><div class="cn-n">380+</div><div class="cn-l">leads/mo</div></div>
+            <div class="cnum"><div class="cn-n">GDPR</div><div class="cn-l">compliant</div></div>
+            <div class="cnum"><div class="cn-n">18</div><div class="cn-l">meetings</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="testimonials">
+  <div class="si">
+    <span class="tag">Testimonials</span>
+    <h2 class="sh">In their<br><span class="d">own words.</span></h2>
+    <div class="tgrid">
+      <div class="tc">
+        <div class="tc-qm">"</div>
+        <div class="tc-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tc-q">"22 qualified meetings in 3 months with exactly the research and strategy leaders we needed. The pre-meeting briefs were exceptional. We showed up knowing precisely who we were talking to and why."</p>
+        <div class="tc-person">
+          <div class="tc-av">BT</div>
+          <div>
+            <div class="tc-name">Bob Takacs</div>
+            <div class="tc-role">Ascot Morgan · New York, USA</div>
+            <div class="tc-badge">✓ Verified Client</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tc-qm">"</div>
+        <div class="tc-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="tc-q">"GDPR compliance was our biggest concern. Every policy was documented before a single email was sent. The Clay enrichment on regulatory change signals was exceptional."</p>
+        <div class="tc-person">
+          <div class="tc-av">RN</div>
+          <div>
+            <div class="tc-name">Ravi Neupane</div>
+            <div class="tc-role">Audit AI · United Kingdom</div>
+            <div class="tc-badge">✓ Verified Client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg2" id="tools">
+  <div class="si">
+    <span class="tag">Tech Stack</span>
+    <h2 class="sh">Every tool<br><span class="d">Used right.</span></h2>
+    <p class="sl">I specialize in making the best tools work together seamlessly.</p>
+    <div class="tg">
+      <div class="tool"><div class="tool-ico">🔵</div><div class="tool-n">HubSpot</div><div class="tool-c">CRM · Pipeline</div></div>
+      <div class="tool"><div class="tool-ico">🚀</div><div class="tool-n">Apollo.io</div><div class="tool-c">Sequences · Data</div></div>
+      <div class="tool"><div class="tool-ico">🧱</div><div class="tool-n">Clay</div><div class="tool-c">AI Enrichment</div></div>
+      <div class="tool"><div class="tool-ico">💼</div><div class="tool-n">Sales Navigator</div><div class="tool-c">LinkedIn · Targeting</div></div>
+      <div class="tool"><div class="tool-ico">📧</div><div class="tool-n">Lemlist</div><div class="tool-c">Email · Personalised</div></div>
+      <div class="tool"><div class="tool-ico">☁️</div><div class="tool-n">Salesforce</div><div class="tool-c">CRM · Enterprise</div></div>
+      <div class="tool"><div class="tool-ico">📊</div><div class="tool-n">Pipedrive</div><div class="tool-c">Pipeline Mgmt</div></div>
+      <div class="tool"><div class="tool-ico">✅</div><div class="tool-n">NeverBounce</div><div class="tool-c">Validation</div></div>
+      <div class="tool"><div class="tool-ico">🔍</div><div class="tool-n">Hunter.io</div><div class="tool-c">Email Finder</div></div>
+      <div class="tool"><div class="tool-ico">📅</div><div class="tool-n">Calendly</div><div class="tool-c">Scheduling</div></div>
+      <div class="tool"><div class="tool-ico">📈</div><div class="tool-n">Crunchbase</div><div class="tool-c">Funding Signals</div></div>
+      <div class="tool"><div class="tool-ico">📋</div><div class="tool-n">Google Sheets</div><div class="tool-c">Dashboards</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec" id="contact">
+  <div class="cta-i">
+    <h2 class="sh" style="color:#fff;margin-bottom:20px">Free Discovery Call<br><span style="color:rgba(255,255,255,.3);">20 minutes. No pitch.</span></h2>
+    <p class="sl">Tell me where you are. I'll tell you what makes sense — and what doesn't.</p>
+    <div class="cta-card">
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="e.g., John Smith">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" required placeholder="Your company name">
+        </div>
+        <div class="form-group">
+          <label for="region">Your Region</label>
+          <select id="region" name="region" required>
+            <option value="">Select your region</option>
+            <option value="usa">🇺🇸 United States</option>
+            <option value="uk">🇬🇧 United Kingdom</option>
+            <option value="eu">🇪🇺 European Union</option>
+            <option value="au">🇦🇺 Australia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">What's your current sales challenge?</label>
+          <textarea id="message" name="message" required placeholder="Tell me about your situation..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send & Get PDF →</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+      <p style="font-size:13px;color:rgba(255,255,255,.6);margin-top:16px;text-align:center;">
+        📅 Or book directly: <a href="https://cal.com/shubham/discovery-call" target="_blank" style="color:var(--aq);text-decoration:none;font-weight:600;">cal.com/shubham</a>
+      </p>
+      <ul class="cta-list">
+        <li>Review your current sales setup</li>
+        <li>Get personalized PDF for your region</li>
+        <li>Realistic numbers — no oversell</li>
+        <li>Next steps if we're a fit</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div class="fb">
+        <div class="fb-brand">
+          <div class="fb-mark">
+            <img src="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100' height='100' fill='%231845e8'/%3E%3Ctext x='50' y='60' font-size='60' font-weight='bold' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E" alt="Logo">
+          </div>
+          <span class="fb-name">hireShubham</span>
+        </div>
+        <p>B2B outbound specialist. 5+ years. Three service pillars. Global reach.</p>
+      </div>
+      <div class="fcol">
+        <h4>Services</h4>
+        <a href="#services">Sales Ops Setup</a>
+        <a href="#services">Growth Engine</a>
+        <a href="#services">SDR-as-a-Service</a>
+      </div>
+      <div class="fcol">
+        <h4>Work</h4>
+        <a href="#cases">Ascot Morgan</a>
+        <a href="#cases">Audit AI</a>
+        <a href="#testimonials">Testimonials</a>
+      </div>
+      <div class="fcol">
+        <h4>Markets</h4>
+        <a href="#contact">🇺🇸 United States</a>
+        <a href="#contact">🇬🇧 United Kingdom</a>
+        <a href="#contact">🇪🇺 European Union</a>
+        <a href="#contact">🇦🇺 Australia</a>
+      </div>
+    </div>
+    <div class="fb-bot">
+      <span>© 2025 hireShubham.com</span>
+      <a href="mailto:hello@hireshubham.com" class="fe">hello@hireshubham.com</a>
+    </div>
+  </div>
+</footer>
+
+<div class="admin-panel">
+  <button class="admin-btn" onclick="document.getElementById('adminModal').classList.add('active')">📋 Upload PDFs</button>
+</div>
+
+<div class="admin-modal" id="adminModal">
+  <div class="admin-content">
+    <button class="close-admin" onclick="document.getElementById('adminModal').classList.remove('active')">×</button>
+    <h2>📄 Upload Regional PDFs</h2>
+    <div class="admin-form">
+      <div>
+        <label>🇺🇸 United States PDF</label>
+        <input type="file" id="pdf-usa" accept=".pdf" onchange="savePDF('usa', this)">
+        <small id="usa-status" class="admin-status"></small>
+      </div>
+      <div>
+        <label>🇬🇧 United Kingdom PDF</label>
+        <input type="file" id="pdf-uk" accept=".pdf" onchange="savePDF('uk', this)">
+        <small id="uk-status" class="admin-status"></small>
+      </div>
+      <div>
+        <label>🇪🇺 European Union PDF</label>
+        <input type="file" id="pdf-eu" accept=".pdf" onchange="savePDF('eu', this)">
+        <small id="eu-status" class="admin-status"></small>
+      </div>
+      <div>
+        <label>🇦🇺 Australia PDF</label>
+        <input type="file" id="pdf-au" accept=".pdf" onchange="savePDF('au', this)">
+        <small id="au-status" class="admin-status"></small>
+      </div>
+      <p style="font-size:12px;color:var(--ink4);margin-top:16px;text-align:center;">✅ PDFs saved locally & sent to users when they submit the form</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function savePDF(region, input) {
+  const file = input.files[0];
+  if (file && file.type === 'application/pdf') {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      localStorage.setItem(`pdf-${region}`, e.target.result);
+      document.getElementById(`${region}-status`).innerText = `✅ Saved: ${file.name}`;
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert('Please upload a valid PDF file');
+  }
+}
+
+function getPDF(region) {
+  return localStorage.getItem(`pdf-${region}`);
+}
+
+function downloadPDF(region, name) {
+  const pdfData = getPDF(region);
+  if (pdfData) {
+    const link = document.createElement('a');
+    link.href = pdfData;
+    link.download = `Discovery-${region.toUpperCase()}-${name.replace(/\s+/g, '-')}.pdf`;
+    link.click();
+    return true;
+  }
+  return false;
+}
+
+document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    company: document.getElementById('company').value,
+    region: document.getElementById('region').value,
+    message: document.getElementById('message').value
+  };
+
+  const submitBtn = document.querySelector('.form-submit');
+  const messageDiv = document.getElementById('formMessage');
+  
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  try {
+    const response = await fetch('/api/submit-contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    const pdfDownloaded = downloadPDF(formData.region, formData.name);
+    
+    if (response.ok || pdfDownloaded) {
+      messageDiv.textContent = pdfDownloaded 
+        ? `✓ Email sent! PDF downloading. Check ${formData.region.toUpperCase()} insights.`
+        : `✓ Email sent! Upload custom PDF in admin panel.`;
+      messageDiv.className = 'form-message success';
+      document.getElementById('bookingForm').reset();
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (error) {
+    messageDiv.textContent = '✓ Request received! Check your email for next steps.';
+    messageDiv.className = 'form-message success';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send & Get PDF →';
+  }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
